@@ -29,10 +29,11 @@ client.on('message', message => {
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
 if (message.content.startsWith('pic')) {
-  client.user.setAvatar(argresult);
-    message.channel.send(`Changing The Avatar To :**${argresult}** `);
-  
-}
+  });
+  
+client.on('ready',async () => {
+  client.channels.find(ch => ch.id === "612740241589272619" && ch.type === 'voice').join();
+
 });
 
 client.login(process.env.BOT_TOKEN);

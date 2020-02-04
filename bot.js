@@ -31,9 +31,6 @@ client.on('message', message => {
 if (message.content.startsWith('pic')) {
   });
   
-client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "612740241589272619" && ch.type === 'voice').join();
 
-});
 
 client.login(process.env.BOT_TOKEN);
